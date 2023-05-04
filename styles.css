@@ -71,6 +71,47 @@ h3 {
   margin: auto;
   margin-bottom: 2%;
 }
+
+/* Mobile Menu Stuff */
+.menu-toggle-btn{
+  float: right;
+  display: none !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width:750px) {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+
+  .Navbar {
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+
+    background:
+    top: 90px;
+    right: 0;
+    display: block;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .Menu{
+    display: none;
+    background-color: rgb(200,200,200);
+  }
+
+  .Menu.active{
+    display:block;
+  }
+
+  .Navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
 /* Article for text holding on certain pages */
 .ArticleText{
   font-family: 'Lato', sans-serif;

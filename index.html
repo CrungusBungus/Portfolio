@@ -2,12 +2,15 @@
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 <title>Keanu's games n stuff</title>
 </head>
 <body>
     <h1>Keanu's Games n Stuff</h1>
     <div class = "Navbar">
-	<nav>
+    <i class="menu-toggle-btn fas fa-bars"></i>
+	<nav class = "Menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -17,6 +20,12 @@
       </ul>
   </nav>
   </div>
+  <script type = "text/javascript">
+  $(".menu-toggle-btn").click(function(){
+    $(this).toggleClass("fa-times");
+    $(".Menu").toggleClass("active");
+  });
+  </script>
 </body>
 <div class = "Divider"> </div>
 <div class = "Content">
