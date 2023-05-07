@@ -32,19 +32,20 @@ h3 {
   text-align: left;
 }
 /* Navigation at the top */
-.Navbar {
+.navbar {
   width: auto;
+  z-index: 200;
 }
-.Navbar nav {
+.navbar nav {
   text-align: center;
 }
-.Navbar li {
+.navbar li {
   float: center;
 }
-.Navbar a {
+.navbar a {
   text-decoration: none;
 }
-.Navbar nav ul li, nav ul li a {
+.navbar nav ul li, nav ul li a {
   display: flex;
   width:100%
   font-family: 'Chivo', sans-serif;
@@ -58,13 +59,13 @@ h3 {
   color: rgb(45,45,45);
   transition-duration: .25s;
 }
-.Navbar nav ul li a:hover {
+.navbar nav ul li a:hover {
   color: rgb(80,160,237);
   font-size: 19px;
   padding-left: 19px;
   padding-right: 19px;
 }
-.Divider {
+.divider {
   max-width: 900px;
   height: 3px;
   background-color: rgb(45,45,45);
@@ -84,7 +85,7 @@ h3 {
     display: block !important;
   }
 
-  .Navbar {
+  .navbar {
     position: fixed;
     width: 100%;
     max-width: 400px;
@@ -97,23 +98,27 @@ h3 {
     box-sizing: border-box;
   }
 
-  .Menu{
+  .menu{
     display: none;
     background-color: rgb(200,200,200);
+    border: solid;
+    border-color: rgb(45,45,45);
+    border-radius: 5px;
+    margin: -10px;
   }
 
-  .Menu.active{
+  .menu.active{
     display:block;
   }
 
-  .Navbar a {
+  .navbar a {
     display: block;
     margin: 10px 0;
   }
 }
 
 /* Article for text holding on certain pages */
-.ArticleText{
+.articletext{
   font-family: 'Lato', sans-serif;
   line-height: 40px;
   text-align: left;
@@ -131,23 +136,23 @@ article {
   border-radius: 20px;
 }
 /*  */
-.Content {
+.content {
   display: flex;
   flex-wrap: wrap;
 }
-.Sidebar {
+.sidebar {
   flex: 25%;
 }
-.Main {
+.main {
   flex: 75%;
 }
 @media (max-width: 900px) {
-  .Sidebar, .Main {
+  .sidebar, .main {
     flex: 100%;
   }
 }
 /* Stuff for games page */
-.GameHolder {
+.gameholder {
   display:grid;
   grid-template-columns: 100% 100% 100%;
   width: 70%;
@@ -155,30 +160,31 @@ article {
   margin-right: auto;
   border-radius: 5px;
 }
-.GameHolder nav {
+.gameholder nav {
   text-align: center;
 }
-.GameHolder nav a button {
+.gameholder nav a button {
   width: 400px;
   height:200px;
   margin-left: auto;
   margin-right: auto;
   color: rgb(255,255,255);
   border-radius: 5px;
-  background-color: rgb(50,50,50);
-  border:none;
+  background-color: rgb(220,220,220);
+  border: solid;
+  border-color: rgb(45,45,45);
   cursor: pointer;
 }
-.GameHolder nav a button img {
+.gameholder nav a button img {
   max-width: 100%;
   max-height: 100%;
   display: block;
   border-radius: 5px;
   z-index: 1;
 }
-.ButtonBottom {
+.buttonbottom {
   border-radius: 5px;
-  background-color: rgb(55,55,55);
+  background-color: rgb(45,45,45);
   width: 100%;
   height: 25px;
   margin-top: -30px;
@@ -189,17 +195,17 @@ article {
   justify-content: center;
   transition-duration: .4s;
 }
-.GameHolder nav a button:hover .ButtonBottom{
-  background-color: rgb(220,220,220);
+.gameholder nav a button:hover .buttonbottom{
+  background-color: rgb(250,250,255);
   color:black;
 }
-.ButtonBottom p {
+.buttonbottom p {
   margin-top: auto;
   margin-bottom: auto;
   font-size: 20px;
 }
 
-.ArticleImage {
+.articleimage {
   max-width: 80%;
   max-height: 800px;
   margin-left: auto;
